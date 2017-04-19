@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {Routes, RouterModule} from '@angular/router';
 import {TranslateModule } from 'ng2-translate';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -40,7 +41,8 @@ const routesApp: Routes = [
     FormsModule,
     HttpModule,
     TranslateModule.forRoot(),
-    RouterModule.forRoot(routesApp)
+    RouterModule.forRoot(routesApp),
+    Ng2PageScrollModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
