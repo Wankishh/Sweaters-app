@@ -5,6 +5,10 @@ function goTo(){
     if($(window).width() < 768)  {
         $li = $('.responsive-nav .header_nav li a');        
     }
+    $li.eq(0).click(function(){
+        var scrollpos = $('#product').offset().top - 120;
+        $("html,body").animate({scrollTop: scrollpos},1000);	 
+    });
     $li.eq(1).click(function(){
         var scrollpos = $('#about').offset().top - 220;
         $("html,body").animate({scrollTop: scrollpos},1000);	
@@ -27,30 +31,39 @@ function goTo(){
     
     $(window).on('scroll',function(){
         var $li = $('.header_nav li a');
-        var scrolltop = $('.header_nav').offset().top;
-        if(scrolltop >= 400 && scrolltop <= 1000) {
+        var scrolltop = $('header').offset().top;
+        var prod = $('#product').height();
+        var prod_off = $('#product').offset().top;
+        console.log(scrolltop - prod_off - prod);
+
+        if(scrolltop >= 350 && scrolltop <= 1720) {
+          $li.eq(0).addClass('active');
+        } else {
+            $li.eq(0).removeClass('active');
+        }
+
+        if(scrolltop >= 1721 && scrolltop <= 2440) {
             $li.eq(1).addClass('active');
         } else {
             $li.eq(1).removeClass('active');
         }
 
-        if(scrolltop >= 1001 && scrolltop <= 1820) {
+        if(scrolltop >= 2441 && scrolltop <= 3260) {
             $li.eq(2).addClass('active');
         } else {
             $li.eq(2).removeClass('active');
         }
 
-        if(scrolltop >= 1821 && scrolltop <= 2999) {
+        if(scrolltop >= 3261 && scrolltop <= 4500) {
             $li.eq(3).addClass('active');
         } else {
             $li.eq(3).removeClass('active');
-        }
-
-        if( scrolltop >= 3000 ) {
+        }  
+        if(scrolltop >= 4501) {
             $li.eq(4).addClass('active');
         } else {
             $li.eq(4).removeClass('active');
-        }
+        }       
 
         if($(window).width() > 1200) {
             if(scrolltop >= 50) {

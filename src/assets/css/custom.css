@@ -189,6 +189,15 @@ header .responsive-nav ul li a:focus {
   background-attachment: fixed;
   padding: 50px 0px;
 }
+.info .list-container {
+  background: #fff;
+  opacity: 0.85;
+  min-height: 280px;
+  font-size: 22px;
+  padding: 20px;
+  margin-bottom:20px;
+  text-align: center;
+}
 #about {
   background-image: url('../images/BannersAndEtc/banner1.jpg'); 
 }
@@ -211,6 +220,8 @@ header .responsive-nav ul li a:focus {
   text-align: center;
   opacity: 0.85;
 }
+
+
 #partners .info_container {
   background: transparent;
 }
@@ -365,4 +376,21 @@ header .responsive-nav ul li a:focus {
     padding: 10px 15px;
   }
   
+}
+/* product styles */
+.product {
+  padding: 50px 0px;
+}
+.product.even {
+  background: #E8E8E6;
+  
+}
+.product .product-info{
+  color: #ea5106;
+  text-align: center;
+  font-size: 26px;
+  padding-top: 20%;
+}
+.product.odd {
+  background: #FFFFFF;
 }
